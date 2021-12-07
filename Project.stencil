@@ -1,0 +1,26 @@
+import ProjectDescription 
+
+let target = Target(name: "{{ name }}",
+                    platform: .macOS,
+                    product: .commandLineTool,
+                    bundleId: "tuist.io.{{ name }}",
+                    infoPlist: .default,
+                    sources: [
+                        "Sources/**"
+                    ],
+                    dependencies: [
+                    ]
+)
+
+let scheme = Scheme(name: "{{ name }}", shared: true, buildAction: .buildAction(targets: ["{{ name }}"]), runAction: .runAction(configuration: .debug, executable: "{{ name }}"))
+
+let prj = Project(name: "{{ name }}",
+                  organizationName: "Tuist.io",
+                  packages: [
+                  ],
+                  targets: [
+                    target
+                  ],
+                  schemes: [scheme]
+
+)
