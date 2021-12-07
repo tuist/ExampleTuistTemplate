@@ -1,7 +1,7 @@
 import Foundation
 
 @main
-struct {{ name }}: ParsableCommand {
+struct {{ name }} {
     func run() throws {
     }
 }
