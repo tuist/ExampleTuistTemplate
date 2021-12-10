@@ -2,6 +2,6 @@ import Foundation
 
 @main
 struct {{ name }} {
-    func run() throws {
+    static func main() throws {
     }
 }
