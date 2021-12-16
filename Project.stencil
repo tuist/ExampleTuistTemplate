@@ -14,7 +14,7 @@ let target = Target(name: "{{ name }}",
 
 let scheme = Scheme(name: "{{ name }}", shared: true, buildAction: .buildAction(targets: ["{{ name }}"]), runAction: .runAction(configuration: .debug, executable: "{{ name }}"))
 
-let prj = Project(name: "{{ name }}",
+let project = Project(name: "{{ name }}",
                   organizationName: "Tuist.io",
                   packages: [
                   ],
